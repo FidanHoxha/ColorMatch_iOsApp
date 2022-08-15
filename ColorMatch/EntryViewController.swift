@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  EntryViewController.swift
 //  ColorMatch
 //
-//  Created by Burim Svishta on 15.8.22.
+//  Created by Fidan Hoxha on 15.8.22.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class EntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
