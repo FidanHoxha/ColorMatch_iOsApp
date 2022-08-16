@@ -22,11 +22,33 @@ class GameViewController: UIViewController {
     @IBOutlet weak var firstCardLabel: UILabel!
     @IBOutlet weak var secondCardLabel: UILabel!
     
-    var gameDurationStr: String?
-
+    var gameDurationStr: String = ""
+    var myTimer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        var gameDuration = Int(gameDurationStr!)
+        
+        timeLabel.text = "\(gameDurationStr)s"
+
+        myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerAction), userInfo: nil, repeats: Int(gameDurationStr)! > 0)
+        
+    }
+    
+    var substractTime = 1
+    
+    @objc func TimerAction() {
+        var gameDuration = Int(gameDurationStr)!
+        gameDuration -= substractTime
+        substractTime += 1
+        timeLabel.text = "\(gameDuration)s"
+        print(gameDuration)
+        // colorTesting()
+        if(gameDuration <= 0) {
+            myTimer.invalidate()
+            let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+            EndVC.modalPresentationStyle = .fullScreen
+            present(EndVC, animated: true)
+        }
     }
 
     @IBAction func didTapNoBtn(_ sender: Any) {

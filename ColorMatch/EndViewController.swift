@@ -21,12 +21,9 @@ class EndViewController: UIViewController {
     
     @IBOutlet weak var secondResultLabel: UILabel!
     
-    var playerName: String?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(playerName!)
 
     }
 

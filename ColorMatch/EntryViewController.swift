@@ -38,10 +38,10 @@ class EntryViewController: UIViewController {
             
             // Create instances of view controllers
             let gameVC = storyboard?.instantiateViewController(withIdentifier: "game") as! GameViewController
-            let endVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+//            let endVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
             
             // Send user input to other view controllers
-            endVC.playerName = playerNameField.text
+//            endVC.playerName = playerNameField.text
             gameVC.gameDurationStr = String(gameDuration)
             
             // Go to Game View
