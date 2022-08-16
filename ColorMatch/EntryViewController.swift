@@ -9,7 +9,6 @@ import UIKit
 
 class EntryViewController: UIViewController {
     
-    
     @IBOutlet weak var playerNameField: UITextField!
     
     var gameDuration = 0
@@ -30,30 +29,43 @@ class EntryViewController: UIViewController {
         gameDuration = 60
     }
     
+    
     // When Play Game button is tapped
     @IBAction func didTapPlayGameBtn() {
-        // Calls function which saves user input
-        saveUserInput()
         
-        // Go to Game View
-        let vc = storyboard?.instantiateViewController(withIdentifier: "game") as! GameViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        // User input error checking
+        if (playerNameField.text != nil) && (gameDuration != 0) {
+            
+            // Create instances of view controllers
+            let gameVC = storyboard?.instantiateViewController(withIdentifier: "game") as! GameViewController
+            let endVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+            
+            // Send user input to other view controllers
+            endVC.playerName = playerNameField.text
+            gameVC.gameDurationStr = String(gameDuration)
+            
+            // Go to Game View
+            gameVC.modalPresentationStyle = .fullScreen
+            present(gameVC, animated: true)
+        }
+        else if playerNameField == nil {
+            // Handle empty player name field error with alerts
+            print("Please enter player name")
+        }
+        else {
+            // Handle no game duration selected error with alerts
+            print("Please select a game duration")
+        }
+        
     }
     
     // Go to the Leaderboard View when Leaderboard button is tapped
     @IBAction func didTapLeaderboardBtn() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "leaderboard") as! LeaderboardViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        let LeaderboardVC = storyboard?.instantiateViewController(withIdentifier: "leaderboard") as! LeaderboardViewController
+        LeaderboardVC.modalPresentationStyle = .fullScreen
+        present(LeaderboardVC, animated: true)
     }
     
-    func saveUserInput() {
-        let playerName = playerNameField.text
-        print("Player name is \(playerName!)")
-        print("Game duration is \(gameDuration)")
-        print("Function works")
-    }
 
 }
 

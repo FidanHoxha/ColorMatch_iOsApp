@@ -483,6 +483,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.7233637571" green="0.2571506798" blue="0.57461798190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapNoBtn:" destination="YW1-0V-qor" eventType="touchUpInside" id="pKC-Of-uVB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-d3-LgJ" userLabel="Yes Button">
                                         <rect key="frame" x="130" y="0.0" width="110" height="60"/>
@@ -496,6 +499,9 @@
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" red="0.71782638087417139" green="0.0" blue="0.57143594788587138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapYesBtn:" destination="YW1-0V-qor" eventType="touchUpInside" id="M7a-Ch-hPn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -520,6 +526,18 @@
                             <constraint firstItem="g3f-qN-ja2" firstAttribute="centerX" secondItem="6XI-fj-Wix" secondAttribute="centerX" id="xYP-eP-CyG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="correctAnsLabel" destination="KLT-Qw-eyq" id="R6H-BZ-MDV"/>
+                        <outlet property="dot1" destination="hyk-Aj-acx" id="oN9-Na-QqU"/>
+                        <outlet property="dot2" destination="N18-Qq-mDJ" id="WE3-CC-1kS"/>
+                        <outlet property="dot3" destination="W3B-TB-cXl" id="w3X-Z8-uKc"/>
+                        <outlet property="dot4" destination="wzV-Jh-9w0" id="qks-Nt-xO9"/>
+                        <outlet property="firstCardLabel" destination="P92-Kv-oXt" id="SHz-xZ-Wj1"/>
+                        <outlet property="multiplierLabel" destination="GJd-iT-tSl" id="kZ1-Va-cEe"/>
+                        <outlet property="scoreLabel" destination="3N2-Go-Oqx" id="mKP-KG-UBp"/>
+                        <outlet property="secondCardLabel" destination="UMo-KH-SNy" id="gWf-vn-y3J"/>
+                        <outlet property="timeLabel" destination="OL5-rg-C0g" id="C1U-mm-Ai1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mj-L6-nHD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,6 +546,7 @@
         <!--End View Controller-->
         <scene sceneID="dHk-ko-e2x">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLQ-Qe-VUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="end" id="1sU-eo-01d" customClass="EndViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHw-ka-hCq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -632,6 +651,34 @@
                                     <constraint firstAttribute="height" constant="150" id="fJc-2X-oIH"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PX2-M4-Duw" userLabel="Result Container">
+                                <rect key="frame" x="67" y="474" width="280" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fidani has scored a total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-oV-OFC" userLabel="First Result Line">
+                                        <rect key="frame" x="10" y="0.0" width="260" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="KJI-E4-hIq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of 12000 points in 20 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-G5-2ga" userLabel="Second Result Line">
+                                        <rect key="frame" x="10" y="40" width="260" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="GjZ-6B-bRw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1486032246" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3wS-Th-88k"/>
+                                    <constraint firstAttribute="width" constant="280" id="dsB-41-Por"/>
+                                </constraints>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="V3G-rp-0jQ" userLabel="End Nav Buttons Container">
                                 <rect key="frame" x="67" y="614" width="280" height="140"/>
                                 <subviews>
@@ -663,34 +710,6 @@
                                     <constraint firstAttribute="height" constant="140" id="Tbe-dr-SVI"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PX2-M4-Duw" userLabel="Result Container">
-                                <rect key="frame" x="67" y="474" width="280" height="80"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fidani has scored a total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-oV-OFC" userLabel="First Result Line">
-                                        <rect key="frame" x="10" y="0.0" width="260" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="260" id="KJI-E4-hIq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of 12000 points in 20 seconds" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-G5-2ga" userLabel="Second Result Line">
-                                        <rect key="frame" x="10" y="40" width="260" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="260" id="GjZ-6B-bRw"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.1486032246" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="3wS-Th-88k"/>
-                                    <constraint firstAttribute="width" constant="280" id="dsB-41-Por"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Un-lh-rCn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -709,8 +728,15 @@
                             <constraint firstItem="V3G-rp-0jQ" firstAttribute="centerX" secondItem="iHw-ka-hCq" secondAttribute="centerX" id="rsT-Ac-Bhv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="correctAnsLabel" destination="Sfl-rc-hNH" id="an5-PD-ETa"/>
+                        <outlet property="firstResultLabel" destination="ncL-oV-OFC" id="hL5-07-Opx"/>
+                        <outlet property="multiplierLabel" destination="xWv-QD-zJL" id="EOy-1B-Zqc"/>
+                        <outlet property="scoreLabel" destination="GDY-g2-fnn" id="dv0-hD-9CB"/>
+                        <outlet property="secondResultLabel" destination="dz3-G5-2ga" id="MpM-J9-bHQ"/>
+                        <outlet property="totalScoreLabel" destination="EBo-md-Gtc" id="iEX-Au-lFp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pLQ-Qe-VUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2584" y="730"/>
         </scene>
