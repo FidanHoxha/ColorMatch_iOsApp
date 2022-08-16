@@ -270,7 +270,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dJO-Cl-ORx" userLabel="Game Info Container">
-                                <rect key="frame" x="127" y="84" width="160" height="170"/>
+                                <rect key="frame" x="127" y="104" width="160" height="170"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-18-bhf" userLabel="Timer Container">
                                         <rect key="frame" x="10" y="0.0" width="140" height="34"/>
@@ -397,7 +397,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TvT-xU-Bh4" userLabel="First Card Container">
-                                <rect key="frame" x="87" y="304" width="240" height="130"/>
+                                <rect key="frame" x="87" y="324" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Does the meaning of the first card:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-lT-ze0">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
@@ -427,7 +427,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-qN-ja2" userLabel="Second Card Container">
-                                <rect key="frame" x="87" y="464" width="240" height="130"/>
+                                <rect key="frame" x="87" y="484" width="240" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match the text color of  the second card:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCw-eN-eeB">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
@@ -456,8 +456,8 @@
                                     <constraint firstAttribute="height" constant="130" id="Bqg-wN-bGm"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9xl-PC-Kmj" userLabel="Answer Button Container">
-                                <rect key="frame" x="87" y="666" width="240" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9xl-PC-Kmj" userLabel="Answer Button Container">
+                                <rect key="frame" x="87" y="694" width="240" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-Yb-7AA">
                                         <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
@@ -468,8 +468,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="No">
                                             <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
-                                            <color key="baseForegroundColor" red="0.56461440015180708" green="0.22532337171635985" blue="0.25708994997874568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="baseBackgroundColor" red="1" green="0.7641275070486796" blue="0.45616948045652306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.7233637571" green="0.2571506798" blue="0.57461798190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-d3-LgJ">
@@ -481,8 +481,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Yes">
                                             <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
-                                            <color key="baseForegroundColor" red="0.56461440019999998" green="0.2253233717" blue="0.25708995000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="baseBackgroundColor" red="1" green="0.76412750699999998" blue="0.4561694805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" red="0.71782638087417139" green="0.0" blue="0.57143594788587138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
@@ -495,7 +495,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TvT-xU-Bh4" firstAttribute="centerX" secondItem="6XI-fj-Wix" secondAttribute="centerX" id="6Z8-JX-T0Z"/>
-                            <constraint firstItem="dJO-Cl-ORx" firstAttribute="top" secondItem="KLw-h1-taz" secondAttribute="top" constant="40" id="HfH-jz-TFm"/>
+                            <constraint firstItem="9xl-PC-Kmj" firstAttribute="top" secondItem="g3f-qN-ja2" secondAttribute="bottom" constant="80" id="7df-aw-ngX"/>
+                            <constraint firstItem="dJO-Cl-ORx" firstAttribute="top" secondItem="KLw-h1-taz" secondAttribute="top" constant="60" id="HfH-jz-TFm"/>
                             <constraint firstItem="STC-OH-PXu" firstAttribute="top" secondItem="6XI-fj-Wix" secondAttribute="top" id="TQo-Dw-fi0"/>
                             <constraint firstAttribute="trailing" secondItem="STC-OH-PXu" secondAttribute="trailing" id="U71-4Y-nh2"/>
                             <constraint firstItem="STC-OH-PXu" firstAttribute="leading" secondItem="6XI-fj-Wix" secondAttribute="leading" id="VBW-uF-C0r"/>
