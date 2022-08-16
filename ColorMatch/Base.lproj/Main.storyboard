@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,44 +13,44 @@
             <objects>
                 <viewController storyboardIdentifier="entry" id="BYZ-38-t0r" customClass="EntryViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="WT5-la-bv6" userLabel="Background Image View">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nmh-b3-Bzr" userLabel="Title Container">
-                                <rect key="frame" x="144" y="74" width="140" height="120"/>
+                                <rect key="frame" x="137" y="74" width="140" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7kt-EK-aBd" userLabel="Upper Title Stack View">
-                                        <rect key="frame" x="18.333333333333336" y="0.0" width="103.33333333333331" height="62.666666666666664"/>
+                                        <rect key="frame" x="18" y="0.0" width="104" height="62.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3i-v6-KaL">
-                                                <rect key="frame" x="0.0" y="0.0" width="26" height="62.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="26" height="62.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="o" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-Od-iBw">
-                                                <rect key="frame" x="26" y="0.0" width="23.333333333333329" height="62.666666666666664"/>
+                                                <rect key="frame" x="26" y="0.0" width="23.5" height="62.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.67060597180000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="l" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFK-2p-BfI">
-                                                <rect key="frame" x="49.333333333333314" y="0.0" width="11.333333333333336" height="62.666666666666664"/>
+                                                <rect key="frame" x="49.5" y="0.0" width="11.5" height="62.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="0.14870843140000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="o" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCi-oi-uhx">
-                                                <rect key="frame" x="60.666666666666664" y="0.0" width="23.333333333333336" height="62.666666666666664"/>
+                                                <rect key="frame" x="61" y="0.0" width="23.5" height="62.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.63285070129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="r" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScB-fd-FSD">
-                                                <rect key="frame" x="84" y="0.0" width="19.333333333333329" height="62.666666666666664"/>
+                                                <rect key="frame" x="84.5" y="0.0" width="19.5" height="62.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -58,34 +58,34 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-wE-ivo" userLabel="Lower Title Stack View">
-                                        <rect key="frame" x="0.0" y="62.666666666666657" width="140" height="57.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="140" height="57.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ug1-lM-Ao8">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="57.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="57.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="a" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9X-AO-oNU">
-                                                <rect key="frame" x="50.333333333333343" y="0.0" width="24.666666666666671" height="57.333333333333336"/>
+                                                <rect key="frame" x="50" y="0.0" width="24.5" height="57.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.67060597180000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="t" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNR-Us-Una">
-                                                <rect key="frame" x="75" y="0.0" width="19.333333333333329" height="57.333333333333336"/>
+                                                <rect key="frame" x="74.5" y="0.0" width="19.5" height="57.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="0.14870843140000001" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="c" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ef4-hJ-3ig">
-                                                <rect key="frame" x="94.333333333333343" y="0.0" width="21.666666666666671" height="57.333333333333336"/>
+                                                <rect key="frame" x="94" y="0.0" width="22" height="57.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.63285070129999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-d6-dl9">
-                                                <rect key="frame" x="116" y="0.0" width="24" height="57.333333333333336"/>
+                                                <rect key="frame" x="116" y="0.0" width="24" height="57.5"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="48"/>
                                                 <color key="textColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -104,7 +104,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E3s-FT-rbO" userLabel="Player Name Container">
-                                <rect key="frame" x="74" y="344" width="280" height="90"/>
+                                <rect key="frame" x="67" y="344" width="280" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKl-3l-63A">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="45"/>
@@ -125,7 +125,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Nbj-cn-mgw" userLabel="Game Duration Container">
-                                <rect key="frame" x="74" y="454" width="280" height="110"/>
+                                <rect key="frame" x="67" y="454" width="280" height="110"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Game Duration:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hB-gP-ifd">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
@@ -178,7 +178,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="QpH-Pu-BcD" userLabel="Nav Buttons Container">
-                                <rect key="frame" x="74" y="614" width="280" height="140"/>
+                                <rect key="frame" x="67" y="614" width="280" height="140"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEG-ef-hwD" userLabel="Play Game Button">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
@@ -237,11 +237,11 @@
             <objects>
                 <viewController storyboardIdentifier="leaderboard" id="H9d-7G-ukb" customClass="LeaderboardViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSV-C2-eUF">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="9go-SB-iQy">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TJS-xL-rK3"/>
@@ -263,119 +263,119 @@
             <objects>
                 <viewController storyboardIdentifier="game" id="YW1-0V-qor" customClass="GameViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XI-fj-Wix">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="STC-OH-PXu">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dJO-Cl-ORx" userLabel="Game Info Container">
-                                <rect key="frame" x="134" y="84" width="160" height="190"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dJO-Cl-ORx" userLabel="Game Info Container">
+                                <rect key="frame" x="127" y="84" width="160" height="170"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HH-18-bhf" userLabel="Timer Container">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="38"/>
+                                        <rect key="frame" x="10" y="0.0" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eA0-v2-qGl">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="40s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL5-rg-C0g" userLabel="Time Data">
-                                                <rect key="frame" x="124.33333333333333" y="0.0" width="35.666666666666671" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="108" y="0.0" width="32" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="Zf6-fF-XHk"/>
+                                            <constraint firstAttribute="width" constant="140" id="Zf6-fF-XHk"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flx-QL-Tdd" userLabel="Correct Answers Container">
-                                        <rect key="frame" x="0.0" y="38" width="160" height="38"/>
+                                        <rect key="frame" x="10" y="34" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EA-HS-Mla">
-                                                <rect key="frame" x="0.0" y="0.0" width="81" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="129" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLT-Qw-eyq" userLabel="Correct Data">
-                                                <rect key="frame" x="81" y="0.0" width="79" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="129" y="0.0" width="11" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="GkV-k3-vG4"/>
+                                            <constraint firstAttribute="width" constant="140" id="GkV-k3-vG4"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdK-ug-rto" userLabel="Score Container">
-                                        <rect key="frame" x="0.0" y="76" width="160" height="38"/>
+                                        <rect key="frame" x="10" y="68" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-8U-Wxr" userLabel="Score: ">
-                                                <rect key="frame" x="0.0" y="0.0" width="74" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="2150" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N2-Go-Oqx" userLabel="Score Data">
-                                                <rect key="frame" x="74" y="0.0" width="86" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="99" y="0.0" width="41" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="5ns-Q8-7am"/>
+                                            <constraint firstAttribute="width" constant="140" id="5ns-Q8-7am"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndd-C6-AbM" userLabel="Multiplier Container">
-                                        <rect key="frame" x="0.0" y="114" width="160" height="38"/>
+                                        <rect key="frame" x="10" y="102" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Multiplier: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQG-oU-N4B" userLabel="Multiplier:">
-                                                <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="x5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-iT-tSl" userLabel="Multiplier Data">
-                                                <rect key="frame" x="111.33333333333336" y="0.0" width="48.666666666666671" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="20"/>
+                                                <rect key="frame" x="119" y="0.0" width="21" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="160" id="JN5-2N-ins"/>
+                                            <constraint firstAttribute="width" constant="140" id="JN5-2N-ins"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zgp-AQ-aMc" userLabel="Dots Container">
-                                        <rect key="frame" x="0.0" y="152" width="160" height="38"/>
+                                        <rect key="frame" x="0.0" y="136" width="160" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-Aj-acx">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N18-Qq-mDJ">
-                                                <rect key="frame" x="40" y="0.0" width="40" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
+                                                <rect key="frame" x="40" y="0.0" width="40" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3B-TB-cXl">
-                                                <rect key="frame" x="80" y="0.0" width="40" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
+                                                <rect key="frame" x="80" y="0.0" width="40" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzV-Jh-9w0">
-                                                <rect key="frame" x="120" y="0.0" width="40" height="38"/>
-                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
+                                                <rect key="frame" x="120" y="0.0" width="40" height="34"/>
+                                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -392,20 +392,119 @@
                                     <constraint firstItem="flx-QL-Tdd" firstAttribute="centerX" secondItem="dJO-Cl-ORx" secondAttribute="centerX" id="6wG-qz-NxQ"/>
                                     <constraint firstAttribute="width" constant="160" id="70E-F7-T8j"/>
                                     <constraint firstItem="8HH-18-bhf" firstAttribute="centerX" secondItem="dJO-Cl-ORx" secondAttribute="centerX" id="OMU-bc-AxN"/>
-                                    <constraint firstAttribute="height" constant="190" id="U4p-3U-6eS"/>
+                                    <constraint firstAttribute="height" constant="170" id="U4p-3U-6eS"/>
                                     <constraint firstItem="ndd-C6-AbM" firstAttribute="centerX" secondItem="dJO-Cl-ORx" secondAttribute="centerX" id="bpQ-tL-XZW"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TvT-xU-Bh4" userLabel="First Card Container">
+                                <rect key="frame" x="87" y="304" width="240" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Does the meaning of the first card:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hx1-lT-ze0">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="n06-hQ-QK3"/>
+                                            <constraint firstAttribute="width" constant="240" id="xJq-dN-ZBl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P92-Kv-oXt" userLabel="First Card Color">
+                                        <rect key="frame" x="0.0" y="60" width="240" height="70"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="QK1-1X-s8V"/>
+                                            <constraint firstAttribute="height" constant="70" id="vRa-Op-eG7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="57o-br-E0v"/>
+                                    <constraint firstAttribute="width" constant="240" id="mpe-Dx-Jqm"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="g3f-qN-ja2" userLabel="Second Card Container">
+                                <rect key="frame" x="87" y="464" width="240" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Match the text color of  the second card:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCw-eN-eeB">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Jh9-Ge-gJY"/>
+                                            <constraint firstAttribute="width" constant="240" id="XyG-KY-frZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yellow" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-KH-SNy" userLabel="Second Card Color">
+                                        <rect key="frame" x="0.0" y="60" width="240" height="70"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="MZd-G1-Ggc"/>
+                                            <constraint firstAttribute="width" constant="240" id="Sy3-Mn-G5v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7WW-dM-Zzd"/>
+                                    <constraint firstAttribute="height" constant="130" id="Bqg-wN-bGm"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9xl-PC-Kmj" userLabel="Answer Button Container">
+                                <rect key="frame" x="87" y="666" width="240" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csd-Yb-7AA">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="2Vr-wg-TVw"/>
+                                            <constraint firstAttribute="width" constant="110" id="gui-ku-a89"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="No">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
+                                            <color key="baseForegroundColor" red="0.56461440015180708" green="0.22532337171635985" blue="0.25708994997874568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="1" green="0.7641275070486796" blue="0.45616948045652306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2i7-d3-LgJ">
+                                        <rect key="frame" x="130" y="0.0" width="110" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3Bw-5W-mTU"/>
+                                            <constraint firstAttribute="width" constant="110" id="fsZ-G0-5hO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Yes">
+                                            <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="32"/>
+                                            <color key="baseForegroundColor" red="0.56461440019999998" green="0.2253233717" blue="0.25708995000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="baseBackgroundColor" red="1" green="0.76412750699999998" blue="0.4561694805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Yej-1H-n4n"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KLw-h1-taz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TvT-xU-Bh4" firstAttribute="centerX" secondItem="6XI-fj-Wix" secondAttribute="centerX" id="6Z8-JX-T0Z"/>
                             <constraint firstItem="dJO-Cl-ORx" firstAttribute="top" secondItem="KLw-h1-taz" secondAttribute="top" constant="40" id="HfH-jz-TFm"/>
                             <constraint firstItem="STC-OH-PXu" firstAttribute="top" secondItem="6XI-fj-Wix" secondAttribute="top" id="TQo-Dw-fi0"/>
                             <constraint firstAttribute="trailing" secondItem="STC-OH-PXu" secondAttribute="trailing" id="U71-4Y-nh2"/>
                             <constraint firstItem="STC-OH-PXu" firstAttribute="leading" secondItem="6XI-fj-Wix" secondAttribute="leading" id="VBW-uF-C0r"/>
+                            <constraint firstItem="9xl-PC-Kmj" firstAttribute="centerX" secondItem="6XI-fj-Wix" secondAttribute="centerX" id="WJ5-XQ-UUO"/>
+                            <constraint firstItem="TvT-xU-Bh4" firstAttribute="top" secondItem="dJO-Cl-ORx" secondAttribute="bottom" constant="50" id="g2G-rR-5X3"/>
                             <constraint firstAttribute="bottom" secondItem="STC-OH-PXu" secondAttribute="bottom" id="oTp-vT-s9k"/>
                             <constraint firstItem="dJO-Cl-ORx" firstAttribute="centerX" secondItem="6XI-fj-Wix" secondAttribute="centerX" id="pXn-aR-tMM"/>
+                            <constraint firstItem="g3f-qN-ja2" firstAttribute="top" secondItem="TvT-xU-Bh4" secondAttribute="bottom" constant="30" id="snA-IU-XaK"/>
+                            <constraint firstItem="g3f-qN-ja2" firstAttribute="centerX" secondItem="6XI-fj-Wix" secondAttribute="centerX" id="xYP-eP-CyG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -418,11 +517,11 @@
             <objects>
                 <viewController storyboardIdentifier="end" id="1sU-eo-01d" customClass="EndViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHw-ka-hCq">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient-background" translatesAutoresizingMaskIntoConstraints="NO" id="DdC-9Z-sXw">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Un-lh-rCn"/>
@@ -441,7 +540,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gradient-background" width="300" height="480"/>
+        <image name="gradient-background" width="450" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
