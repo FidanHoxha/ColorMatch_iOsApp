@@ -733,6 +733,7 @@
                         <outlet property="correctAnsLabel" destination="Sfl-rc-hNH" id="an5-PD-ETa"/>
                         <outlet property="firstResultLabel" destination="ncL-oV-OFC" id="hL5-07-Opx"/>
                         <outlet property="multiplierLabel" destination="xWv-QD-zJL" id="EOy-1B-Zqc"/>
+                        <outlet property="multiplierTextLabel" destination="pPa-Jj-GQ8" id="U82-Eg-EAK"/>
                         <outlet property="scoreLabel" destination="GDY-g2-fnn" id="dv0-hD-9CB"/>
                         <outlet property="secondResultLabel" destination="dz3-G5-2ga" id="MpM-J9-bHQ"/>
                         <outlet property="totalScoreLabel" destination="EBo-md-Gtc" id="iEX-Au-lFp"/>

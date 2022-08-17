@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     
     // Initializing variables that will store game info data
     var secondCardFontColor = ""
+    var playerName: String = ""
     var gameDurationStr: String = ""
     var correctAnsCounter = 0
     var score = 0
@@ -180,9 +181,16 @@ class GameViewController: UIViewController {
     
     func gameHasEnded() {
         myTimer.invalidate()
+
+        // Send game data to End View
+        let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+        EndVC.playerName = playerName
+        EndVC.gameDurationStr = gameDurationStr
+        EndVC.correctAnsCounter = String(correctAnsCounter)
+        EndVC.multiplier = String(multiplier)
+        EndVC.score = String(score)
         
         // Go to End View
-        let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
         EndVC.modalPresentationStyle = .fullScreen
         present(EndVC, animated: true)
     }

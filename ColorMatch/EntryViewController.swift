@@ -29,16 +29,15 @@ class EntryViewController: UIViewController {
         if (playerNameField.text != nil) && (gameDuration != 0) {
             
             // Create instances of view controllers
-            let gameVC = storyboard?.instantiateViewController(withIdentifier: "game") as! GameViewController
-//            let endVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+            let GameVC = storyboard?.instantiateViewController(withIdentifier: "game") as! GameViewController
             
             // Send user input to other view controllers
-//            endVC.playerName = playerNameField.text
-            gameVC.gameDurationStr = String(gameDuration)
+            GameVC.playerName = playerNameField.text!
+            GameVC.gameDurationStr = String(gameDuration)
             
             // Go to Game View
-            gameVC.modalPresentationStyle = .fullScreen
-            present(gameVC, animated: true)
+            GameVC.modalPresentationStyle = .fullScreen
+            present(GameVC, animated: true)
         }
         else if playerNameField == nil {
             // Handle empty player name field error with alerts
