@@ -1,10 +1,3 @@
-//
-//  GameViewController.swift
-//  ColorMatch
-//
-//  Created by Fidan Hoxha on 15.8.22.
-//
-
 import UIKit
 
 class GameViewController: UIViewController {
@@ -14,6 +7,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var multiplierLabel: UILabel!
     
+    // Multiplier dot labels that will be manipulated
     @IBOutlet weak var dot1: UILabel!
     @IBOutlet weak var dot2: UILabel!
     @IBOutlet weak var dot3: UILabel!
@@ -22,50 +16,55 @@ class GameViewController: UIViewController {
     @IBOutlet weak var firstCardLabel: UILabel!
     @IBOutlet weak var secondCardLabel: UILabel!
     
-    var gameDurationStr: String = ""
-    var myTimer = Timer()
-    var substractTime = 1
+    // Initializing variables that will store game info data
     var secondCardFontColor = ""
+    var gameDurationStr: String = ""
     var correctAnsCounter = 0
+    var score = 0
+    var multiplier = 1
+    
+    // Declaring a timer that will decrease and its substracting value
+    var myTimer = Timer()
+    var timeToSubtract = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Display initial game duration
         timeLabel.text = "\(gameDurationStr)s"
 
+        // Initialize the timer which calls function TimerAction every second until it goes to 0
         myTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimerAction), userInfo: nil, repeats: Int(gameDurationStr)! > 0)
         
-        colorSetting()
-        
+        // Function which sets card meaning and font color
+        colorSetter()
         
     }
     
     @IBAction func didTapNoBtn(_ sender: Any) {
-        if firstCardLabel.text != secondCardFontColor {
-            answeredCorrectly()
-        }
-        else {
-            answeredIncorrectly()
-        }
+        
+        checkAnswer("No")
+        
         correctAnsLabel.text = String(correctAnsCounter)
-        colorSetting()
+        scoreLabel.text = String(score)
+        
+        colorSetter()
     }
     
     @IBAction func didTapYesBtn(_ sender: Any) {
-        if firstCardLabel.text == secondCardFontColor {
-            answeredCorrectly()
-        }
-        else {
-            answeredIncorrectly()
-        }
+        
+        checkAnswer("Yes")
+        
         correctAnsLabel.text = String(correctAnsCounter)
-        colorSetting()
+        scoreLabel.text = String(score)
+        
+        colorSetter()
     }
     
     @objc func TimerAction() {
         var gameDuration = Int(gameDurationStr)!
-        gameDuration -= substractTime
-        substractTime += 1
+        gameDuration -= timeToSubtract
+        timeToSubtract += 1
         timeLabel.text = "\(gameDuration)s"
         if(gameDuration <= 0) {
             myTimer.invalidate()
@@ -75,8 +74,7 @@ class GameViewController: UIViewController {
         }
     }
     
-    func colorSetting() {
-        
+    func colorSetter() {
         firstCardLabel.text = pickRandomColor()
         secondCardLabel.text = pickRandomColor()
         
@@ -113,13 +111,66 @@ class GameViewController: UIViewController {
         return randomColor
     }
     
-    func answeredCorrectly() {
-        correctAnsCounter += 1
-        print("Correct answer!")
+    func checkAnswer(_ btnTapped: String) {
+        if (btnTapped == "No") && (firstCardLabel.text != secondCardFontColor) ||
+            (btnTapped == "Yes") && (firstCardLabel.text == secondCardFontColor) {
+                correctAnsCounter += 1
+                score += (50 * multiplier)
+                print("Score increased by \(50 * multiplier)")
+                increaseMultiplier()
+                print("Correct answer!")
+        }
+        else {
+            decreaseMultiplier()
+            print("Incorrect answer, counter not increasing")
+        }
     }
     
-    func answeredIncorrectly() {
-        print("Incorrect answer, counter not increasing")
+    func increaseMultiplier() {
+        // If multiplier has not reached its maximum value (10)
+        if multiplier != 10 {
+            if dot1.textColor == UIColor.white {
+                dot1.textColor = UIColor.systemPink
+                print("reached level 1")
+            }
+            else if dot2.textColor == UIColor.white {
+                dot2.textColor = UIColor.systemPink
+                print("reached level 2")
+
+            }
+            else if dot3.textColor == UIColor.white {
+                dot3.textColor = UIColor.systemPink
+                print("reached level 3")
+
+            } else if dot4.textColor == UIColor.white {
+                dot4.textColor = UIColor.systemPink
+                print("reached level 4")
+            }
+            else {
+                multiplier += 1
+                multiplierLabel.text = String(multiplier)
+                resetMultiplierDots()
+                print("reached level 5")
+            }
+        }
+    }
+    
+    func decreaseMultiplier() {
+        // Reset multiplier dots
+        resetMultiplierDots()
+        
+        // If multiplier is higher that its minimum value (1)
+        if multiplier != 1 {
+            multiplier -= 1
+            multiplierLabel.text = String(multiplier)
+        }
+    }
+    
+    func resetMultiplierDots() {
+        dot1.textColor = UIColor.white
+        dot2.textColor = UIColor.white
+        dot3.textColor = UIColor.white
+        dot4.textColor = UIColor.white
     }
     
 }
