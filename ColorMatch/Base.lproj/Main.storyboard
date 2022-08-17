@@ -428,7 +428,7 @@
                                             <constraint firstAttribute="width" constant="240" id="QK1-1X-s8V"/>
                                             <constraint firstAttribute="height" constant="70" id="vRa-Op-eG7"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -458,7 +458,7 @@
                                             <constraint firstAttribute="height" constant="70" id="MZd-G1-Ggc"/>
                                             <constraint firstAttribute="width" constant="240" id="Sy3-Mn-G5v"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -546,7 +546,6 @@
         <!--End View Controller-->
         <scene sceneID="dHk-ko-e2x">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pLQ-Qe-VUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="end" id="1sU-eo-01d" customClass="EndViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iHw-ka-hCq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -690,6 +689,7 @@
                                             <color key="baseBackgroundColor" red="0.71968561409999998" green="0.25878751280000001" blue="0.57818907500000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="didTapPlayAgainBtn:" destination="1sU-eo-01d" eventType="touchUpInside" id="ing-uX-vNX"/>
                                             <action selector="didTapPlayGameBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWl-J7-1wU"/>
                                         </connections>
                                     </button>
@@ -702,6 +702,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="didTapLeaderboardBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAX-dy-TxF"/>
+                                            <action selector="didTapLeaderboardBtn:" destination="1sU-eo-01d" eventType="touchUpInside" id="H4v-WR-BLi"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -737,6 +738,7 @@
                         <outlet property="totalScoreLabel" destination="EBo-md-Gtc" id="iEX-Au-lFp"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pLQ-Qe-VUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2584" y="730"/>
         </scene>

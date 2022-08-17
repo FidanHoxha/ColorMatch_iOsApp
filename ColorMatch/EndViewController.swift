@@ -27,4 +27,16 @@ class EndViewController: UIViewController {
 
     }
 
+    @IBAction func didTapPlayAgainBtn(_ sender: Any) {
+        let EntryVC = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        EntryVC.modalPresentationStyle = .fullScreen
+        present(EntryVC, animated: true)
+    }
+    
+    
+    @IBAction func didTapLeaderboardBtn(_ sender: Any) {
+        let LeaderboardVC = storyboard?.instantiateViewController(withIdentifier: "leaderboard") as! LeaderboardViewController
+        LeaderboardVC.modalPresentationStyle = .fullScreen
+        present(LeaderboardVC, animated: true)
+    }
 }
