@@ -136,38 +136,24 @@
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ESg-Iy-fbC" userLabel="Durations Container">
                                         <rect key="frame" x="0.0" y="55" width="280" height="55"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQf-WD-R1L" userLabel="20s Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQf-WD-R1L" userLabel="30s Button">
                                                 <rect key="frame" x="0.0" y="2" width="80" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="Thf-NU-Xwo"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="20s">
+                                                <buttonConfiguration key="configuration" style="filled" title="30s">
                                                     <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="28"/>
                                                     <color key="baseBackgroundColor" red="0.0" green="0.64309017540000002" blue="0.96538374159999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="didTap20sBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nmg-i6-dtu"/>
+                                                    <action selector="didTap30sBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fbO-yb-8Gi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPw-Vs-El6" userLabel="40s Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPw-Vs-El6" userLabel="60s Button">
                                                 <rect key="frame" x="100" y="2" width="80" height="51"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="80" id="taz-oP-23a"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="40s">
-                                                    <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="28"/>
-                                                    <color key="baseBackgroundColor" red="0.0" green="0.64309017540000002" blue="0.96538374159999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didTap40sBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xd7-EG-nLj"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-fn-Exs" userLabel="60s Button">
-                                                <rect key="frame" x="200" y="2" width="80" height="51"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="80" id="gwo-DM-iPZ"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="60s">
@@ -175,7 +161,21 @@
                                                     <color key="baseBackgroundColor" red="0.0" green="0.64309017540000002" blue="0.96538374159999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="didTap60sBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Twr-ay-rao"/>
+                                                    <action selector="didTap60sBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8s-ug-crr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2e-fn-Exs" userLabel="90s Button">
+                                                <rect key="frame" x="200" y="2" width="80" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="gwo-DM-iPZ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="90s">
+                                                    <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="28"/>
+                                                    <color key="baseBackgroundColor" red="0.0" green="0.64309017540000002" blue="0.96538374159999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTap90sBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCc-T4-Z6a"/>
                                                 </connections>
                                             </button>
                                         </subviews>

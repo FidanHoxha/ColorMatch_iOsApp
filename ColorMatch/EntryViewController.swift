@@ -1,10 +1,3 @@
-//
-//  EntryViewController.swift
-//  ColorMatch
-//
-//  Created by Fidan Hoxha on 15.8.22.
-//
-
 import UIKit
 
 class EntryViewController: UIViewController {
@@ -17,18 +10,17 @@ class EntryViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func didTap20sBtn(_ sender: Any) {
-        gameDuration = 20
-    }
-    
-    @IBAction func didTap40sBtn(_ sender: Any) {
-        gameDuration = 40
+    @IBAction func didTap30sBtn(_ sender: Any) {
+        gameDuration = 30
     }
     
     @IBAction func didTap60sBtn(_ sender: Any) {
         gameDuration = 60
     }
     
+    @IBAction func didTap90sBtn(_ sender: Any) {
+        gameDuration = 90
+    }
     
     // When Play Game button is tapped
     @IBAction func didTapPlayGameBtn() {

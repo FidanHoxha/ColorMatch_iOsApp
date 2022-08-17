@@ -45,9 +45,11 @@ class GameViewController: UIViewController {
         
         checkAnswer("No")
         
+        // Display correct answers and score
         correctAnsLabel.text = String(correctAnsCounter)
         scoreLabel.text = String(score)
         
+        // Set next card meaning and font color
         colorSetter()
     }
     
@@ -55,25 +57,33 @@ class GameViewController: UIViewController {
         
         checkAnswer("Yes")
         
+        // Display correct answers and score
         correctAnsLabel.text = String(correctAnsCounter)
         scoreLabel.text = String(score)
         
+        // Set next card meaning and font color
         colorSetter()
     }
     
+    // Function called every second
     @objc func TimerAction() {
+        // Decrease and display time left
         var gameDuration = Int(gameDurationStr)!
         gameDuration -= timeToSubtract
         timeToSubtract += 1
         timeLabel.text = "\(gameDuration)s"
+        
+        // Checks if game is over
         if(gameDuration <= 0) {
-            myTimer.invalidate()
-            let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
-            EndVC.modalPresentationStyle = .fullScreen
-            present(EndVC, animated: true)
+            gameHasEnded()
+//            myTimer.invalidate()
+//            let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+//            EndVC.modalPresentationStyle = .fullScreen
+//            present(EndVC, animated: true)
         }
     }
     
+    // Sets the card meaning of both cards and the font color of the second card
     func colorSetter() {
         firstCardLabel.text = pickRandomColor()
         secondCardLabel.text = pickRandomColor()
@@ -93,9 +103,9 @@ class GameViewController: UIViewController {
             secondCardFontColor = "yellow"
         default: print("An error has occurred!")
         }
-        
     }
     
+    // Returns a randomly chosen color
     func pickRandomColor() -> String {
         let randomNumber = Int.random(in: 1...4)
         var randomColor = ""
@@ -114,63 +124,67 @@ class GameViewController: UIViewController {
     func checkAnswer(_ btnTapped: String) {
         if (btnTapped == "No") && (firstCardLabel.text != secondCardFontColor) ||
             (btnTapped == "Yes") && (firstCardLabel.text == secondCardFontColor) {
-                correctAnsCounter += 1
-                score += (50 * multiplier)
-                print("Score increased by \(50 * multiplier)")
-                increaseMultiplier()
-                print("Correct answer!")
+            // User has answered correctly
+            correctAnsCounter += 1
+            score += (50 * multiplier)
+            increaseMultiplier()
         }
         else {
+            // User has answered incorrectly
             decreaseMultiplier()
-            print("Incorrect answer, counter not increasing")
         }
     }
     
     func increaseMultiplier() {
         // If multiplier has not reached its maximum value (10)
         if multiplier != 10 {
+            //Statements to find which is the last active multiplier dot
             if dot1.textColor == UIColor.white {
                 dot1.textColor = UIColor.systemPink
-                print("reached level 1")
             }
             else if dot2.textColor == UIColor.white {
                 dot2.textColor = UIColor.systemPink
-                print("reached level 2")
-
             }
             else if dot3.textColor == UIColor.white {
                 dot3.textColor = UIColor.systemPink
-                print("reached level 3")
-
-            } else if dot4.textColor == UIColor.white {
-                dot4.textColor = UIColor.systemPink
-                print("reached level 4")
             }
+            else if dot4.textColor == UIColor.white {
+                dot4.textColor = UIColor.systemPink
+            }
+            // If all the dots are active, reset them and increase multiplier
             else {
                 multiplier += 1
-                multiplierLabel.text = String(multiplier)
+                multiplierLabel.text = "x\(multiplier)"
                 resetMultiplierDots()
-                print("reached level 5")
             }
         }
     }
     
     func decreaseMultiplier() {
-        // Reset multiplier dots
         resetMultiplierDots()
         
-        // If multiplier is higher that its minimum value (1)
+        // If multiplier is higher that its minimum value (1), decrease it
         if multiplier != 1 {
             multiplier -= 1
-            multiplierLabel.text = String(multiplier)
+            multiplierLabel.text = "x\(multiplier)"
         }
     }
     
+    // Reset all multiplier dots
     func resetMultiplierDots() {
         dot1.textColor = UIColor.white
         dot2.textColor = UIColor.white
         dot3.textColor = UIColor.white
         dot4.textColor = UIColor.white
+    }
+    
+    func gameHasEnded() {
+        myTimer.invalidate()
+        
+        // Go to End View
+        let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
+        EndVC.modalPresentationStyle = .fullScreen
+        present(EndVC, animated: true)
     }
     
 }
