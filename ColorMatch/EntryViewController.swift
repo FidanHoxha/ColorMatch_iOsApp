@@ -52,15 +52,14 @@ class EntryViewController: UIViewController {
             GameVC.modalPresentationStyle = .fullScreen
             present(GameVC, animated: true)
         }
-        else if playerNameField == nil {
-            // Handle empty player name field error with alerts
-            print("Please enter player name")
+        else if let text = playerNameField.text, text.isEmpty {
+            // Player has not entered his name
+            handleEmptyNameField()
         }
         else {
-            // Handle no game duration selected error with alerts
-            print("Please select a game duration")
+            // Player has not selected game duration
+            handleNoGameDurationSelected()
         }
-        
     }
     
     // Go to the Leaderboard View when Leaderboard button is tapped
@@ -76,6 +75,27 @@ class EntryViewController: UIViewController {
         btn60s.backgroundColor =  UIColor.systemTeal
         btn90s.backgroundColor =  UIColor.systemTeal
     }
+    
+    // Function to handle empty player name field error with alert
+    func handleEmptyNameField() {
+        
+        let emptyPlayerNameAlert = UIAlertController(title: "Empty Player Name Field", message: "Please type your player name in the white field.", preferredStyle: .alert)
+        
+        emptyPlayerNameAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in print("User dismissed emptyPlayerNameAlert")}))
+        
+        present(emptyPlayerNameAlert, animated: true)
+    }
+    
+    // Function to handle no game duration selected error with alerts
+    func handleNoGameDurationSelected() {
+        
+        let durationNotSelectedAlert = UIAlertController(title: "Game Duration Not Selected", message: "Please click one of the blue buttons to select the duration of the game.", preferredStyle: .alert)
+        
+        durationNotSelectedAlert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in print("User dismissed durationNotSelectedAlert")}))
+        
+        present(durationNotSelectedAlert, animated: true)
+    }
+
 
 }
 
