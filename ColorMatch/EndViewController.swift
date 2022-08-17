@@ -24,9 +24,14 @@ class EndViewController: UIViewController {
         displayGameResult()
     }
 
-    // Go to the Entry View when Play Again button is tapped
+    // When Play Again button is tapped
     @IBAction func didTapPlayAgainBtn(_ sender: Any) {
         let EntryVC = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        
+        // Fill the playerName field with previously entered name if Play Again button is tapped
+        EntryVC.previousGameName = playerName
+        
+        // Go to Entry View
         EntryVC.modalPresentationStyle = .fullScreen
         present(EntryVC, animated: true)
     }

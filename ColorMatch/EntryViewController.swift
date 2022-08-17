@@ -4,11 +4,11 @@ class EntryViewController: UIViewController {
     
     @IBOutlet weak var playerNameField: UITextField!
     
-    
     @IBOutlet weak var btn30s: UIButton!
     @IBOutlet weak var btn60s: UIButton!
     @IBOutlet weak var btn90s: UIButton!
     
+    var previousGameName: String = ""
     var gameDuration = 0
     
     override func viewDidLoad() {
@@ -16,6 +16,11 @@ class EntryViewController: UIViewController {
         
         // Set the background of all game duration buttons to Teal
         setTealBtnBackground()
+        
+        // If the user has pressed play again, save his name
+        if !(previousGameName.isEmpty) {
+            playerNameField.text = previousGameName
+        }
     }
     
     // Set game duration and highlight based on button tapped
@@ -52,7 +57,7 @@ class EntryViewController: UIViewController {
             GameVC.modalPresentationStyle = .fullScreen
             present(GameVC, animated: true)
         }
-        else if let text = playerNameField.text, text.isEmpty {
+        else if let name = playerNameField.text, name.isEmpty {
             // Player has not entered his name
             handleEmptyNameField()
         }
