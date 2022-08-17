@@ -1,10 +1,3 @@
-//
-//  EndViewController.swift
-//  ColorMatch
-//
-//  Created by Fidan Hoxha on 16.8.22.
-//
-
 import UIKit
 
 class EndViewController: UIViewController {
@@ -45,14 +38,16 @@ class EndViewController: UIViewController {
         present(LeaderboardVC, animated: true)
     }
     
+    // Display game data to labels
     func displayGameResult() {
         correctAnsLabel.text = correctAnsCounter
         scoreLabel.text = score
         multiplierTextLabel.text = "Multiplier x\(multiplier) bonus: "
-        multiplierLabel.text = String(multiplier)
+        // Cast multiplier to Int, calculate bonus and cast back to String
+        multiplierLabel.text = String(Int(multiplier)! * 250)
         totalScoreLabel.text = calculateTotalScore()
-        firstResultLabel.text = "\(playerName) has scored a"
-        secondResultLabel.text = "total of \(totalScore) points in \(gameDurationStr)s"
+        firstResultLabel.text = "\(playerName) has scored a total"
+        secondResultLabel.text = "of \(totalScore) points in \(gameDurationStr)s"
     }
     
     func calculateTotalScore() -> String {

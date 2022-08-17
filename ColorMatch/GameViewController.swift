@@ -77,10 +77,6 @@ class GameViewController: UIViewController {
         // Checks if game is over
         if(gameDuration <= 0) {
             gameHasEnded()
-//            myTimer.invalidate()
-//            let EndVC = storyboard?.instantiateViewController(withIdentifier: "end") as! EndViewController
-//            EndVC.modalPresentationStyle = .fullScreen
-//            present(EndVC, animated: true)
         }
     }
     
@@ -89,7 +85,15 @@ class GameViewController: UIViewController {
         firstCardLabel.text = pickRandomColor()
         secondCardLabel.text = pickRandomColor()
         
-        switch pickRandomColor() {
+        // Manipulating second card font color so that a match happends half the time
+        let decideMatchOrNot = Int.random(in: 1...100)
+        // By default it will be a match, but it has a 66% chance that the color will be randomly selected
+        var color = firstCardLabel.text
+        if decideMatchOrNot <= 66 {
+            color = pickRandomColor()
+        }
+        
+        switch color {
         case "black":
             secondCardLabel.textColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 1.0);
             secondCardFontColor = "black"
