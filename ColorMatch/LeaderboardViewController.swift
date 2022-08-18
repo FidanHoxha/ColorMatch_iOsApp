@@ -20,9 +20,10 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
+        tableView.backgroundView = UIImageView(image: UIImage(named: "gradient-background.png")!)
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done , target: self, action: #selector(didTapBack))
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
-
     }
     
     @objc private func didTapAdd() {
@@ -46,7 +47,10 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = model.score! // changed here
+        cell.textLabel?.text = "\(model.score!) - \(model.createdAt!)"
+        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 18.0)
         return cell
     }
     
@@ -55,7 +59,7 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
         let scoreRow = models[indexPath.row]
         let sheet = UIAlertController(title: "Edit", message: nil, preferredStyle: .actionSheet)
         sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
+        sheet.addAction(UIAlertAction(title: "Edit Score", style: .default, handler: { _ in
 
             let editScoreAlert = UIAlertController(title: "Edit Score", message: "Edit Your Score", preferredStyle: .alert)
             editScoreAlert.addTextField(configurationHandler: nil)
@@ -78,6 +82,15 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
         present(sheet, animated: true)
     }
     
+    // Go to Entry View when Back button is tapped
+    @objc private func didTapBack() {
+        let EntryVC = storyboard?.instantiateViewController(withIdentifier: "entry") as! EntryViewController
+        EntryVC.modalPresentationStyle = .fullScreen
+        present(EntryVC, animated: true)
+    }
+    
+    // ========== Core Data Functions ==========
+    
     func getAllItems() {
         do {
             models = try context.fetch(ScoreTableItem.fetchRequest())
@@ -87,7 +100,7 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
         catch {
-            // Error
+            print("Error in getAllItems function of Core Data")
         }
     }
     
@@ -101,7 +114,7 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
             getAllItems()
         }
         catch {
-            // Error
+            print("Error in createScore function of Core Data")
         }
     }
     
@@ -113,7 +126,7 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
             getAllItems()
         }
         catch {
-            // Error
+            print("Error in deleteScore function of Core Data")
         }
     }
     
@@ -125,7 +138,7 @@ class ScoreListViewController: UIViewController, UITableViewDelegate, UITableVie
             getAllItems()
         }
         catch {
-            // Error
+            print("Error in updateScore function of Core Data")
         }
     }
 }
