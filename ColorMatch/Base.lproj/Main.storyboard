@@ -200,15 +200,15 @@
                                             <action selector="didTapPlayGameBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zC-Ob-Oyn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKq-84-Xhh" userLabel="To Leaderboard Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKq-84-Xhh" userLabel="Score List Button">
                                         <rect key="frame" x="0.0" y="80" width="280" height="60"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Leaderboard">
+                                        <buttonConfiguration key="configuration" style="filled" title="Score List">
                                             <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="24"/>
                                             <color key="baseBackgroundColor" red="0.71968561409999998" green="0.25878751280000001" blue="0.57818907500000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapLeaderboardBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="4TM-SM-DdV"/>
+                                            <action selector="didTapScoreListBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sv-tz-wP8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -247,10 +247,10 @@
             </objects>
             <point key="canvasLocation" x="1829.4392523364486" y="53.779697624190071"/>
         </scene>
-        <!--Leaderboard View Controller-->
+        <!--Score List View Controller-->
         <scene sceneID="oGy-q9-8Cn">
             <objects>
-                <viewController storyboardIdentifier="leaderboard" id="H9d-7G-ukb" customClass="LeaderboardViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderboard" id="H9d-7G-ukb" customClass="ScoreListViewController" customModule="ColorMatch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSV-C2-eUF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -268,10 +268,11 @@
                             <constraint firstItem="9go-SB-iQy" firstAttribute="leading" secondItem="YSV-C2-eUF" secondAttribute="leading" id="ekv-Fm-qW9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iZ8-o1-v1h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUu-8c-Y46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2585" y="54"/>
+            <point key="canvasLocation" x="3494.202898550725" y="53.571428571428569"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="nyF-Uv-8yH">
@@ -291,13 +292,13 @@
                                         <rect key="frame" x="10" y="0.0" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eA0-v2-qGl">
-                                                <rect key="frame" x="0.0" y="0.0" width="109.5" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="107.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="27s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL5-rg-C0g" userLabel="Time Data">
-                                                <rect key="frame" x="109.5" y="0.0" width="30.5" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="60s" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OL5-rg-C0g" userLabel="Time Data">
+                                                <rect key="frame" x="107.5" y="0.0" width="32.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -311,13 +312,13 @@
                                         <rect key="frame" x="10" y="34" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Correct:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EA-HS-Mla">
-                                                <rect key="frame" x="0.0" y="0.0" width="121" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="12" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLT-Qw-eyq" userLabel="Correct Ans Data">
-                                                <rect key="frame" x="121" y="0.0" width="19" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLT-Qw-eyq" userLabel="Correct Ans Data">
+                                                <rect key="frame" x="128.5" y="0.0" width="11.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -331,13 +332,13 @@
                                         <rect key="frame" x="10" y="68" width="140" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Score: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWT-8U-Wxr" userLabel="Score: ">
-                                                <rect key="frame" x="0.0" y="0.0" width="106" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="128.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="950" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N2-Go-Oqx" userLabel="Score Data">
-                                                <rect key="frame" x="106" y="0.0" width="34" height="34"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3N2-Go-Oqx" userLabel="Score Data">
+                                                <rect key="frame" x="128.5" y="0.0" width="11.5" height="34"/>
                                                 <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="18"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -696,16 +697,15 @@
                                             <action selector="didTapPlayGameBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="xWl-J7-1wU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpD-D2-XlN" userLabel="To Leaderboard Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpD-D2-XlN" userLabel="Score List Button">
                                         <rect key="frame" x="0.0" y="80" width="280" height="60"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Leaderboard">
+                                        <buttonConfiguration key="configuration" style="filled" title="Score List">
                                             <fontDescription key="titleFontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="24"/>
                                             <color key="baseBackgroundColor" red="0.71968561409999998" green="0.25878751280000001" blue="0.57818907500000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapLeaderboardBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAX-dy-TxF"/>
-                                            <action selector="didTapLeaderboardBtn:" destination="1sU-eo-01d" eventType="touchUpInside" id="H4v-WR-BLi"/>
+                                            <action selector="didTapScoreListBtn:" destination="1sU-eo-01d" eventType="touchUpInside" id="gQZ-Kl-OjM"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -745,6 +745,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLQ-Qe-VUT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2584" y="730"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x7Z-7a-FUD">
+            <objects>
+                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" id="FgW-fz-SNm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="B09-UB-lSJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="H9d-7G-ukb" kind="relationship" relationship="rootViewController" id="d5r-sp-BYZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCA-Dn-W24" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2584.057971014493" y="53.571428571428569"/>
         </scene>
     </scenes>
     <resources>
