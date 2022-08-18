@@ -67,11 +67,12 @@ class EntryViewController: UIViewController {
         }
     }
     
-    // Go to the Leaderboard View when Leaderboard button is tapped
-    @IBAction func didTapLeaderboardBtn() {
-        let LeaderboardVC = storyboard?.instantiateViewController(withIdentifier: "leaderboard") as! LeaderboardViewController
-        LeaderboardVC.modalPresentationStyle = .fullScreen
-        present(LeaderboardVC, animated: true)
+    // Go to the Score List View when Score List button is tapped
+    @IBAction func didTapScoreListBtn(_ sender: Any) {
+        // Navigation sends directly to Score List View
+        let NavigationVC = storyboard?.instantiateViewController(withIdentifier: "navigation") as! UINavigationController
+        NavigationVC.modalPresentationStyle = .fullScreen
+        present(NavigationVC, animated: true)
     }
     
     // Set the background of all game duration buttons to teal (unhighlighted)
