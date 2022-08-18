@@ -1,6 +1,6 @@
 import UIKit
 
-class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ScoreListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -13,9 +13,8 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
     private var models = [ScoreTableItem]()
     
     override func viewDidLoad() {
-        print("View did load gets called")
         super.viewDidLoad()
-        title = "Score Table"
+        title = "Your Score List"
         getAllItems()
         view.addSubview(tableView)
         tableView.delegate = self
@@ -27,17 +26,17 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @objc private func didTapAdd() {
-//        let alert = UIAlertController(title: "New Item", message: "Enter New Item", preferredStyle: .alert)
-//        alert.addTextField(configurationHandler: nil)
-//        alert.addAction(UIAlertAction(title: "Submit", style: .cancel, handler: { [weak self] _ in
-//            guard let field = alert.textFields?.first, let text = field.text, !text.isEmpty else {
-//                return
-//            }
-//
-//            self?.createScore(score: text) // changed function here
-//        }))
-//
-//        present(alert, animated: true)
+        let addScoreAlert = UIAlertController(title: "Add New Score", message: "Add player name and score                               (ex. John Doe - 12650 points)", preferredStyle: .alert)
+        addScoreAlert.addTextField(configurationHandler: nil)
+        addScoreAlert.addAction(UIAlertAction(title: "Submit Score", style: .cancel, handler: { [weak self] _ in
+            guard let field = addScoreAlert.textFields?.first, let addedScore = field.text, !addedScore.isEmpty else {
+                return
+            }
+
+            self?.createScore(score: addedScore)
+        }))
+
+        present(addScoreAlert, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,30 +52,30 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = models[indexPath.row]
-//        let sheet = UIAlertController(title: "Edit", message: nil, preferredStyle: .actionSheet)
-//        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-//        sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
-//
-//            let alert = UIAlertController(title: "Edit Item", message: "Edit Your Item", preferredStyle: .alert)
-//            alert.addTextField(configurationHandler: nil)
-//            alert.textFields?.first?.text = item.score // changed here
-//            alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
-//                guard let field = alert.textFields?.first, let newScore = field.text, !newScore.isEmpty else {
-//                    return
-//                }
-//
-//                self?.updateItem(item: item, newScore: newScore) //changed here
-//            }))
-//
-//            self.present(alert, animated: true)
-//
-//        }))
-//        sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
-//            self?.deleteItem(item: item)
-//        }))
-//
-//        present(sheet, animated: true)
+        let scoreRow = models[indexPath.row]
+        let sheet = UIAlertController(title: "Edit", message: nil, preferredStyle: .actionSheet)
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
+
+            let editScoreAlert = UIAlertController(title: "Edit Score", message: "Edit Your Score", preferredStyle: .alert)
+            editScoreAlert.addTextField(configurationHandler: nil)
+            editScoreAlert.textFields?.first?.text = scoreRow.score
+            editScoreAlert.addAction(UIAlertAction(title: "Save Score", style: .cancel, handler: { [weak self] _ in
+                guard let field = editScoreAlert.textFields?.first, let newScore = field.text, !newScore.isEmpty else {
+                    return
+                }
+
+                self?.updateScore(item: scoreRow, newScore: newScore)
+            }))
+
+            self.present(editScoreAlert, animated: true)
+
+        }))
+        sheet.addAction(UIAlertAction(title: "Delete Score", style: .destructive, handler: { [weak self] _ in
+            self?.deleteScore(item: scoreRow)
+        }))
+
+        present(sheet, animated: true)
     }
     
     func getAllItems() {
@@ -106,7 +105,7 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    func deleteItem(item: ScoreTableItem) {
+    func deleteScore(item: ScoreTableItem) {
         context.delete(item)
         
         do {
@@ -118,7 +117,7 @@ class LeaderboardViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    func updateItem(item: ScoreTableItem, newScore: String) {
+    func updateScore(item: ScoreTableItem, newScore: String) {
         item.score = newScore
         
         do {
