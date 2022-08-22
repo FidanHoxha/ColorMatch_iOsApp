@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		03074F6C28AA8DF100429594 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03074F6B28AA8DF100429594 /* AppDelegate.swift */; };
 		03074F6E28AA8DF100429594 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03074F6D28AA8DF100429594 /* SceneDelegate.swift */; };
-		03074F7028AA8DF100429594 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03074F6F28AA8DF100429594 /* ViewController.swift */; };
+		03074F7028AA8DF100429594 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03074F6F28AA8DF100429594 /* EntryViewController.swift */; };
 		03074F7328AA8DF100429594 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03074F7128AA8DF100429594 /* Main.storyboard */; };
 		03074F7528AA8DF900429594 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03074F7428AA8DF900429594 /* Assets.xcassets */; };
 		03074F7828AA8DF900429594 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03074F7628AA8DF900429594 /* LaunchScreen.storyboard */; };
+		0324D50328AE3BFC00789123 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0324D50128AE3BFC00789123 /* CoreDataModel.xcdatamodeld */; };
+		0324D50628AE3CFF00789123 /* ScoreTableItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324D50428AE3CFF00789123 /* ScoreTableItem+CoreDataClass.swift */; };
+		0324D50728AE3CFF00789123 /* ScoreTableItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0324D50528AE3CFF00789123 /* ScoreTableItem+CoreDataProperties.swift */; };
+		0339FE0628AB8855005BA6AB /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0339FE0528AB8855005BA6AB /* EndViewController.swift */; };
+		033D6AA528AAF01E00DA5624 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D6AA428AAF01E00DA5624 /* GameViewController.swift */; };
+		033D6AA728AAF3F700DA5624 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033D6AA628AAF3F700DA5624 /* LeaderboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		03074F6828AA8DF100429594 /* ColorMatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorMatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03074F6B28AA8DF100429594 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03074F6D28AA8DF100429594 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03074F6F28AA8DF100429594 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03074F6F28AA8DF100429594 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		03074F7228AA8DF100429594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03074F7428AA8DF900429594 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03074F7728AA8DF900429594 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03074F7928AA8DF900429594 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0324D50228AE3BFC00789123 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		0324D50428AE3CFF00789123 /* ScoreTableItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreTableItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0324D50528AE3CFF00789123 /* ScoreTableItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScoreTableItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0339FE0528AB8855005BA6AB /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		033D6AA428AAF01E00DA5624 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		033D6AA628AAF3F700DA5624 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,29 @@
 		03074F6A28AA8DF100429594 /* ColorMatch */ = {
 			isa = PBXGroup;
 			children = (
+				0324D50828AE3D0D00789123 /* ScoreTableItem */,
 				03074F6B28AA8DF100429594 /* AppDelegate.swift */,
 				03074F6D28AA8DF100429594 /* SceneDelegate.swift */,
-				03074F6F28AA8DF100429594 /* ViewController.swift */,
+				03074F6F28AA8DF100429594 /* EntryViewController.swift */,
+				0324D50128AE3BFC00789123 /* CoreDataModel.xcdatamodeld */,
 				03074F7128AA8DF100429594 /* Main.storyboard */,
+				0339FE0528AB8855005BA6AB /* EndViewController.swift */,
+				033D6AA628AAF3F700DA5624 /* LeaderboardViewController.swift */,
+				033D6AA428AAF01E00DA5624 /* GameViewController.swift */,
 				03074F7428AA8DF900429594 /* Assets.xcassets */,
 				03074F7628AA8DF900429594 /* LaunchScreen.storyboard */,
 				03074F7928AA8DF900429594 /* Info.plist */,
 			);
 			path = ColorMatch;
+			sourceTree = "<group>";
+		};
+		0324D50828AE3D0D00789123 /* ScoreTableItem */ = {
+			isa = PBXGroup;
+			children = (
+				0324D50428AE3CFF00789123 /* ScoreTableItem+CoreDataClass.swift */,
+				0324D50528AE3CFF00789123 /* ScoreTableItem+CoreDataProperties.swift */,
+			);
+			path = ScoreTableItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03074F7028AA8DF100429594 /* ViewController.swift in Sources */,
+				0339FE0628AB8855005BA6AB /* EndViewController.swift in Sources */,
+				033D6AA528AAF01E00DA5624 /* GameViewController.swift in Sources */,
+				03074F7028AA8DF100429594 /* EntryViewController.swift in Sources */,
+				0324D50728AE3CFF00789123 /* ScoreTableItem+CoreDataProperties.swift in Sources */,
+				033D6AA728AAF3F700DA5624 /* LeaderboardViewController.swift in Sources */,
+				0324D50628AE3CFF00789123 /* ScoreTableItem+CoreDataClass.swift in Sources */,
 				03074F6C28AA8DF100429594 /* AppDelegate.swift in Sources */,
+				0324D50328AE3BFC00789123 /* CoreDataModel.xcdatamodeld in Sources */,
 				03074F6E28AA8DF100429594 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +390,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0324D50128AE3BFC00789123 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0324D50228AE3BFC00789123 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 0324D50228AE3BFC00789123 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 03074F6028AA8DF100429594 /* Project object */;
 }

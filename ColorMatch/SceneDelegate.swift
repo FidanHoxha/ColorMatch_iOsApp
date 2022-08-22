@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  ColorMatch
-//
-//  Created by Burim Svishta on 15.8.22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
